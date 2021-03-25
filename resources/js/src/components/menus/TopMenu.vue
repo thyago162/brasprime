@@ -10,7 +10,7 @@
                     <b-nav-item :to="{name: 'unauthenticated.home'}" >Início</b-nav-item>
                     <b-nav-item>Quem somos</b-nav-item>
                     <b-nav-item>Serviços</b-nav-item>
-                    <b-nav-item>Agendamentos</b-nav-item>
+                    <b-nav-item :to="{name: 'unauthenticated.agendamento'}">Agendamentos</b-nav-item>
                     <b-nav-item :to="{name: 'unauthenticated.contato'}">Contato</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
