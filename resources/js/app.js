@@ -2,6 +2,7 @@ require('./bootstrap');
 
 import Vue from 'vue';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+import VueCarousel from 'vue-carousel';
 import router from './src/routes/index';
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
@@ -14,6 +15,8 @@ Vue.component('app', require('./src/App.vue').default);
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+// Vue Carousel
+Vue.use(VueCarousel);
 
 import './src/plugins/vue-schedule'
 
