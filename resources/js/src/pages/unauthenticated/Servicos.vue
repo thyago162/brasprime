@@ -29,32 +29,22 @@
       <b-col class="servicos_oferecidos">
         <b-col cols="12">
           <h2>Serviços oferecidos</h2>
-          <p>
+          <p class='section-desc'>
             Nossos serviços são de alta qualidade e profissionalismo, abaixo
-            temos alguns dos<br />
-            principais serviços que oferecemos para nossos clientes
+            temos alguns dos principais serviços que oferecemos para nossos clientes
           </p>
         </b-col>
         <b-row class="container mx-auto mt-5">
           <b-col>
-            <b-row class="mb-5">
-              <b-col v-for="(servico, index) in servicos_line1" :key="index">
-                <b-img-lazy :src="servico.icon"></b-img-lazy>
-                <h4 class="pt-3">{{ servico.title }}</h4>
-                <p>
-                  {{ servico.description }}
-                </p>
-              </b-col>
-            </b-row>
             <b-row>
-              <b-col v-for="(servico, index) in servicos_line2" :key="index">
+              <b-col class="mb-5" cols='6' md="4" v-for="(servico, index) in servicos_oferecidos" :key="index">
                 <b-img-lazy :src="servico.icon"></b-img-lazy>
                 <h4 class="pt-3">{{ servico.title }}</h4>
                 <p>
                   {{ servico.description }}
                 </p>
               </b-col>
-            </b-row>
+            </b-row>            
           </b-col>
         </b-row>
       </b-col>
@@ -62,27 +52,31 @@
     <b-row class="container mx-auto">
       <b-col>
         <carousel
-          :navigation-next-label="nextLabel"
-          :navigation-prev-label="prevLabel"
           :paginationEnabled="false"
           :navigationEnabled="true"
           :perPage="1"
           class="servicos_carousel"
         >
-          <slide v-for="(slide, index) in servicos_carousel" :key="index">
-            <b-col cols="12">
-              <h2>{{ slide.title }}</h2>
-              <p>{{ slide.description }}</p>
-              <ul class="custom-list">
-                <li v-for="(servico, index) in slide.services" :key="index">
-                  <span><b-icon icon="check-circle"></b-icon></span
-                  >{{ servico }}
-                </li>
-              </ul>
-            </b-col>
-            <b-col cols="12">
-              <b-img-lazy :src="slide.image"></b-img-lazy>
-            </b-col>
+          <slide
+            style="padding: 10px 20px"
+            v-for="(slide, index) in servicos_carousel"
+            :key="index"
+          >
+            <b-row>
+              <b-col cols="12" md="6">
+                <h2>{{ slide.title }}</h2>
+                <p>{{ slide.description }}</p>
+                <ul class="custom-list">
+                  <li v-for="(servico, index) in slide.services" :key="index">
+                    <span><b-icon icon="check-circle"></b-icon></span
+                    >{{ servico }}
+                  </li>
+                </ul>
+              </b-col>
+              <b-col class="d-none d-md-block" cols="12" md="6" style="border: 1px solid black">
+                <b-img-lazy :src="slide.image"></b-img-lazy>
+              </b-col>
+            </b-row>
           </slide>
         </carousel>
       </b-col>
@@ -97,7 +91,10 @@
     >
       <b-col class="fale_conosco">
         <h1>Ficou com alguma dúvida?</h1>
-        <p>Nos envie uma mensagem e te responderemos<br> o mais rápido possível</p>
+        <p>
+          Nos envie uma mensagem e te responderemos<br />
+          o mais rápido possível
+        </p>
         <b-button>ENVIAR MENSAGEM</b-button>
       </b-col>
     </b-row>
@@ -111,7 +108,7 @@ export default {
     return {
       logo: require("../../assets/images/logo_3.png").default,
       bloco: require("../../assets/images/borda_amarela.svg").default,
-      servicos_line1: [
+      servicos_oferecidos: [
         {
           icon: require("../../assets/images/suspension.svg").default,
           title: "Suspensão",
@@ -130,8 +127,6 @@ export default {
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at ornare elit.",
         },
-      ],
-      servicos_line2: [
         {
           icon: require("../../assets/images/taxi.svg").default,
           title: "Serviço leva e traz",
@@ -248,6 +243,10 @@ export default {
   h2 {
     margin-bottom: 20px;
   }
+  p {
+    max-width: 640px;
+    margin: 0 auto;
+  }
   img {
     height: 72px;
     width: 72px;
@@ -256,24 +255,24 @@ export default {
     padding: 10px;
   }
 }
-.servicos_carousel {
-  padding: 80px 0;
+.servicos_carousel{
+  padding: 80px 0; 
 }
 .fale_conosco {
-    text-align: center;
-    padding: 80px 0;
-    p {
-        font-size: 20px;
-        padding: 12px;
-    }
-    button {
-      background-color: #ffd42e;
-      font-weight: bold;
-      border: none;
-      width: 300px;
-      padding: 15px 10px;
-      font-size: 1.2rem;
-    }
+  text-align: center;
+  padding: 80px 0;
+  p {
+    font-size: 20px;
+    padding: 12px;
+  }
+  button {
+    background-color: #ffd42e;
+    font-weight: bold;
+    border: none;
+    width: 300px;
+    padding: 15px 10px;
+    font-size: 1.2rem;
+  }
 }
 .custom-list {
   list-style: none;

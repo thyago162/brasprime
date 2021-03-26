@@ -21,7 +21,7 @@ const routes = [
         name: 'unauthenticated.quem_somos'
     },
     {
-        path: 'serviços',
+        path: 'servicos',
         component: Servicos,
         name: 'unauthenticated.servicos'
     },

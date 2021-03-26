@@ -17,19 +17,19 @@
               <h6>Brasprime</h6>
               <ul>
                 <li>
-                  <b-link>Início</b-link>
+                  <b-link href="/">Início</b-link>
                 </li>
                 <li>
-                  <b-link>Quem somos</b-link>
+                  <b-link href="/quem-somos">Quem somos</b-link>
                 </li>
                 <li>
-                  <b-link>Serviços</b-link>
+                  <b-link href="/servicos">Serviços</b-link>
                 </li>
                 <li>
-                  <b-link>Agendamentos</b-link>
+                  <b-link href="/agendamentos">Agendamentos</b-link>
                 </li>
                 <li>
-                  <b-link>Contato</b-link>
+                  <b-link href="/contato">Contato</b-link>
                 </li>
               </ul>
             </b-col>
@@ -100,15 +100,24 @@ ul {
 }
 
 .footer {
-  padding: 10px;
+  padding: 50px 0;
+  text-align: center;
+  @media(min-width: 1024px) {
+    padding: 0;
+    text-align: justify;
+  }
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
-  height: 280px;
+  min-height: 280px;
 
   img {
     height: 150px;
+    margin: 0 auto 20px auto;
+    @media(min-width: 1024px) {
+      margin: 0;
+    }
   }
 }
 .second_footer {
