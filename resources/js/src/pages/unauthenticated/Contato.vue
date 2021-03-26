@@ -30,13 +30,13 @@
           <b-col offset="0" offset-lg="1">
             <b-form class="contato_form">
               <b-row>
-                <b-col>
+                <b-col cols="12" md="6">
                   <b-form-group>
                     <label for="">Nome completo</label>
                     <b-form-input placeholder="Digite seu nome"></b-form-input>
                   </b-form-group>
                 </b-col>
-                <b-col>
+                <b-col cols="12" md="6">
                   <b-form-group>
                     <label for="">Email</label>
                     <b-form-input

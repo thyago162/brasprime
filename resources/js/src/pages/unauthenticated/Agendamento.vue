@@ -25,27 +25,25 @@
         </h5>
         <b-form class="agendamento_form">
           <b-row>
-            <b-col>
+            <b-col cols="12" sm="6" md="4" class="mb-3">
               <b-form-group>
                 <label for="">Nome</label>
                 <b-form-input placeholder="Digite seu nome"></b-form-input>
               </b-form-group>
             </b-col>
-            <b-col>
+            <b-col cols="12" sm="6" md="4" class="mb-3">
               <b-form-group>
                 <label for="">E-mail</label>
                 <b-form-input placeholder="Digite seu email"></b-form-input>
               </b-form-group>
             </b-col>
-            <b-col>
+            <b-col cols="12" sm="6" md="4" class="mb-3">
               <b-form-group>
                 <label for="">Telefone</label>
                 <b-form-input placeholder="Digite seu telefone"></b-form-input>
               </b-form-group>
             </b-col>
-          </b-row>
-          <b-row>
-            <b-col>
+            <b-col cols="12" sm="6" md="4" class="mb-3">
               <b-form-group>
                 <label for="">Placa</label>
                 <b-form-input
@@ -53,13 +51,13 @@
                 ></b-form-input>
               </b-form-group>
             </b-col>
-            <b-col>
+            <b-col cols="12" sm="6" md="4" class="mb-3">
               <b-form-group>
                 <label for="">Serviços</label>
                 <b-form-select></b-form-select>
               </b-form-group>
             </b-col>
-            <b-col>
+            <b-col cols="12" sm="6" md="4" class="mb-3">
               <b-form-group>
                 <label for="">Data do agendamento</label>
                 <b-form-input
@@ -82,13 +80,21 @@
         </b-form>
       </b-col>
     </b-row>
-    <b-row >
-      <b-col :style="{paddingRight: '0px', paddingLeft: '0px'}" >
-          <div class="agendamento_mensagem">
-              <h5>Ficou com alguma dúvida?</h5>
-              <p>Nos envie uma mensagem e te responderemos o mais rápido possível</p>
-              <b-button>ENVIAR MENSAGEM</b-button>
-          </div>
+    <b-row
+      :style="{
+        backgroundImage:
+          'url(' +
+          require('../../assets/images/banner-fale-conosco.png').default +
+          ')',
+      }"
+    >
+      <b-col class="fale_conosco">
+        <h2>Ficou com alguma dúvida?</h2>
+        <p>
+          Nos envie uma mensagem e te responderemos
+          o mais rápido possível
+        </p>
+        <b-button>ENVIAR MENSAGEM</b-button>
       </b-col>
     </b-row>
   </b-container>
@@ -119,7 +125,7 @@ button {
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    text-align: justify;
+    text-align: center;
     @media screen and (min-width: 760px) {
       width: calc(100% / 3);
       margin-top: 150px;
@@ -171,6 +177,24 @@ button {
   .agendamento_div {
     background-size: contain;
     background-repeat: no-repeat;
+  }
+}
+.fale_conosco {
+  text-align: center;
+  padding: 80px 0;
+  p {
+    font-size: 18px;
+    padding: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  button {
+    background-color: #ffd42e;
+    font-weight: bold;
+    border: none;
+    width: 300px;
+    padding: 15px 10px;
+    font-size: 1.2rem;
   }
 }
 </style>

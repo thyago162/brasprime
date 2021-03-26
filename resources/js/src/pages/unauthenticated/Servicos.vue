@@ -90,9 +90,9 @@
       }"
     >
       <b-col class="fale_conosco">
-        <h1>Ficou com alguma dúvida?</h1>
+        <h2>Ficou com alguma dúvida?</h2>
         <p>
-          Nos envie uma mensagem e te responderemos<br />
+          Nos envie uma mensagem e te responderemos
           o mais rápido possível
         </p>
         <b-button>ENVIAR MENSAGEM</b-button>
@@ -262,8 +262,10 @@ export default {
   text-align: center;
   padding: 80px 0;
   p {
-    font-size: 20px;
+    font-size: 18px;
     padding: 12px;
+    max-width: 400px;
+    margin: 0 auto;
   }
   button {
     background-color: #ffd42e;
