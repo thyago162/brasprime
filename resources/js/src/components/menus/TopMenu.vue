@@ -33,6 +33,8 @@ export default {
 <style lang="scss" scoped>
 .logo {
     height: 40px;
-    margin-left: 50px;
+    @media(min-width: 640px) {
+        margin-left: 50px;
+    }    
 }
 </style>

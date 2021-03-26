@@ -11,22 +11,22 @@ const routes = [
         name: 'unauthenticated.home'
     },
     {
-        path: 'contato',
+        path: '/contato',
         component: Contato,
         name: 'unauthenticated.contato'
     },
     {
-        path: 'quem-somos',
+        path: '/quem-somos',
         component: QuemSomos,
         name: 'unauthenticated.quem_somos'
     },
     {
-        path: 'serviços',
+        path: '/servicos',
         component: Servicos,
         name: 'unauthenticated.servicos'
     },
     {
-        path: 'agendamentos',
+        path: '/agendamentos',
         component: Agendamento,
         name: 'unauthenticated.agendamento'
     }
