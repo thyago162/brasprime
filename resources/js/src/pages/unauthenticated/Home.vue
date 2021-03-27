@@ -1,132 +1,214 @@
 <template>
   <b-container fluid>
-    <b-row>
-      <b-col
-        class="home"
+    <section>
+      <b-row>
+        <b-col
+          class="home"
+          :style="{
+            backgroundImage:
+              'url(' +
+              require('../../assets/images/banner_home_1.png').default +
+              ')',
+          }"
+        >
+          <div class="home_title">
+            <h2>Conte com serviços de alta qualidade para o seu carro</h2>
+            <p>Lorem ipsun dikir sut amet,consectetur adipsicing elit,</p>
+            <b-button>AGENDAR VISTORIA</b-button>
+          </div>
+        </b-col>
+      </b-row>
+    </section>
+    <section>
+      <b-row
         :style="{
           backgroundImage:
             'url(' +
-            require('../../assets/images/banner_home_1.png').default +
+            require('../../assets/images/BANNER_BRANCO.png').default +
             ')',
         }"
       >
-        <div class="home_title">
-          <h2>Conte com serviços de alta qualidade para o seu carro</h2>
-          <p>Lorem ipsun dikir sut amet,consectetur adipsicing elit,</p>
-          <b-button>AGENDAR VISTORIA</b-button>
-        </div>
-      </b-col>
-    </b-row>
-    <b-row
-      :style="{
-        backgroundImage:
-          'url(' +
-          require('../../assets/images/BANNER_BRANCO.png').default +
-          ')',
-      }"
-    >
-      <b-col class="d-flex justify-content-center">
-        <div class="home_servicos">
-          <h4>Serviços oferecidos</h4>
-          <p>
-            Lorem ipsum ad potenti risus etiam, pretium nulla lobortis ad
-            aliquet, pharetra convallis vulputate senectus. phasellus ante
-            curabitur inceptos aliquam sagittis arcu luctus
+        <b-col class="d-flex justify-content-center">
+          <div class="home_servicos">
+            <h4>Serviços oferecidos</h4>
+            <p>
+              Lorem ipsum ad potenti risus etiam, pretium nulla lobortis ad
+              aliquet, pharetra convallis vulputate senectus. phasellus ante
+              curabitur inceptos aliquam sagittis arcu luctus
+            </p>
+            <div class="servicos_icones">
+              <div class="d-flex flex-column bloco_icone">
+                <div class="icone">
+                  <b-img-lazy :src="suspensao"></b-img-lazy>
+                </div>
+                <h6 class="mt-1">Suspenção</h6>
+                <span class="ml-3"
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span
+                >
+              </div>
+              <div class="d-flex flex-column bloco_icone">
+                <div class="icone">
+                  <b-img-lazy :src="oleo"></b-img-lazy>
+                </div>
+                <h6 class="mt-1">Troca de Óleo</h6>
+                <span class="ml-3"
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span
+                >
+              </div>
+              <div class="d-flex flex-column bloco_icone">
+                <div class="icone">
+                  <b-img-lazy :src="motor"></b-img-lazy>
+                </div>
+                <h6 class="mt-1">Motor</h6>
+                <span class="ml-3"
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span
+                >
+              </div>
+            </div>
+          </div>
+        </b-col>
+      </b-row>
+    </section>
+    <section>
+      <b-row>
+        <b-col cols="12 d-flex justify-content-center">
+          <div class="mt-5 home_info">
+            <h5>Vistoria Técnica totalmente <span>GRÁTIS</span></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <div>
+              <b-button>VER SERVIÇOS</b-button>
+              <b-button :style="{ backgroundColor: '#ffd42e' }"
+                >AGENDAR VISTORIA</b-button
+              >
+            </div>
+          </div>
+        </b-col>
+      </b-row>
+    </section>
+    <section>
+      <b-row
+        class="home_referencia"
+        :style="{
+          backgroundImage:
+            'url(' +
+            require('../../assets/images/banner_home_2.png').default +
+            ')',
+        }"
+      >
+        <b-col offset="0" offset-lg="2">
+          <b-row>
+            <b-col>
+              <h4>Referência automotiva</h4>
+              <p>
+                Lorem ipsum phasellus tempor in quisque tempus vulputate class,
+                sem eleifend per maecenas class condimentum etiam elit justo,
+                vivamus dictum euismod elementum nisi litora per. vitae fames
+                cras etiam malesuada vitae sapien sollicitudin congue semper
+                accumsan, consectetur mollis dictum hac viverra lacus justo
+                suscipit cubilia auctor aliquam,
+              </p>
+            </b-col>
+          </b-row>
+          <b-row>
+            <b-col>
+              <div class="home_referencia_caracteristicas">
+                <b-row class="mt-4">
+                  <b-col cols="6">
+                    <h6>
+                      <span>
+                        <b-icon icon="check-circle"></b-icon>
+                      </span>
+                      Experiência
+                    </h6>
+                    <h6>
+                      <span>
+                        <b-icon icon="check-circle"></b-icon>
+                      </span>
+                      Ótimo espaço
+                    </h6>
+                  </b-col>
+                  <b-col>
+                    <h6>
+                      <span>
+                        <b-icon icon="check-circle"></b-icon>
+                      </span>
+                      Tecnologia de ponta
+                    </h6>
+                    <h6>
+                      <span>
+                        <b-icon icon="check-circle"></b-icon>
+                      </span>
+                      Avaliações positívas
+                    </h6>
+                  </b-col>
+                </b-row>
+              </div>
+            </b-col>
+          </b-row>
+          <b-row class="mt-5 ml-1">
+            <b-col>
+              <b-link>Saiba mais sobre <span>Brasprime</span></b-link>
+            </b-col>
+          </b-row>
+        </b-col>
+        <b-col>
+          <b-img-lazy fluid :src="logo"></b-img-lazy>
+        </b-col>
+      </b-row>
+    </section>
+    <section>
+      <b-row>
+        <b-col class="home_depoimentos">
+          <b-row>
+            <b-col>
+              <h4 class="mt-4">O que falam sobre nós</h4>
+            </b-col>
+          </b-row>
+          <b-row>
+            <b-col cols="12" lg="10" offset="0" offset-lg="1">
+              <carousel
+                :perPage="1"
+                :navigationEnabled="true"
+                :paginationEnabled="false"
+                class="mt-5"
+              >
+                <slide class="d-flex flex-row justify-content-center">
+                  <p>"Atendimento de alto nível com preço justo."</p>
+                </slide>
+                <slide class="d-flex flex-row justify-content-center">
+                  <p>
+                    "Ambiente agradavél, mecanicos competentes, aqui posso
+                    deixar meu carro sem preocupações."
+                  </p>
+                </slide>
+              </carousel>
+            </b-col>
+          </b-row>
+        </b-col>
+      </b-row>
+    </section>
+    <section>
+      <b-row class="home_clientes">
+        <b-col :style="{ paddingRight: '0px', paddingLeft: '0px' }">
+          <h4>Nossos clientes</h4>
+        </b-col>
+      </b-row>
+    </section>
+    <section class="home_duvida">
+      <b-row >
+        <b-col>
+          <h4 class="mt-4">Ficou alguma dúvida?</h4>
+          <p class="mt-1">
+            Nos envie uma mensgem e te responderemos o mais rápido possível
           </p>
-          <div class="servicos_icones">
-            <div class="d-flex flex-column bloco_icone">
-              <div class="icone">
-                <b-img-lazy :src="suspensao"></b-img-lazy>
-              </div>
-              <h6 class="mt-1">Suspenção</h6>
-              <span class="ml-3"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span
-              >
-            </div>
-            <div class="d-flex flex-column bloco_icone">
-              <div class="icone">
-                <b-img-lazy :src="oleo"></b-img-lazy>
-              </div>
-              <h6 class="mt-1">Troca de Óleo</h6>
-              <span class="ml-3"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span
-              >
-            </div>
-            <div class="d-flex flex-column bloco_icone">
-              <div class="icone">
-                <b-img-lazy :src="motor"></b-img-lazy>
-              </div>
-              <h6 class="mt-1">Motor</h6>
-              <span class="ml-3"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span
-              >
-            </div>
-          </div>
-        </div>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col cols="12 d-flex justify-content-center">
-        <div class="mt-5 home_info">
-          <h5>Vistoria Técnica totalmente <span>GRÁTIS</span></h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          <div>
-            <b-button>VER SERVIÇOS</b-button>
-            <b-button :style="{ backgroundColor: '#ffd42e' }"
-              >AGENDAR VISTORIA</b-button
-            >
-          </div>
-        </div>
-      </b-col>
-    </b-row>
-    <b-row
-      class="home_referencia"
-      :style="{
-        backgroundImage:
-          'url(' +
-          require('../../assets/images/banner_home_2.png').default +
-          ')',
-      }"
-    >
-      <b-col offset="0" offset-lg="2">
-        <h4>Referência automotiva</h4>
-        <p>
-          Lorem ipsum phasellus tempor in quisque tempus vulputate class, sem
-          eleifend per maecenas class condimentum etiam elit justo, vivamus
-          dictum euismod elementum nisi litora per. vitae fames cras etiam
-          malesuada vitae sapien sollicitudin congue semper accumsan,
-          consectetur mollis dictum hac viverra lacus justo suscipit cubilia
-          auctor aliquam,
-        </p>
-        <div class="home_referencia_caracteristicas">
-          <h6>
-            <span>
-              <b-icon icon="check-circle"></b-icon>
-            </span>
-            Experiência
-          </h6>
-          <h6>
-            <span>
-              <b-icon icon="check-circle"></b-icon>
-            </span>
-            Ótimo espaço
-          </h6>
-          <h6>
-            <span>
-              <b-icon icon="check-circle"></b-icon>
-            </span>
-            Tecnologia de ponta
-          </h6>
-          <h6>
-            <span>
-              <b-icon icon="check-circle"></b-icon>
-            </span>
-            Avaliações positívas
-          </h6>
-        </div>
-      </b-col>
-      <b-col> </b-col>
-    </b-row>
+        </b-col>
+      </b-row>
+      <b-row class="mt-3 mb-4">
+        <b-col class="d-flex flex-row justify-content-center">
+          <b-button>ENVIAR MENSAGEM</b-button>
+        </b-col>
+      </b-row>
+    </section>
   </b-container>
 </template>
 
@@ -138,6 +220,7 @@ export default {
       suspensao: require("../../assets/images/suspension.svg").default,
       motor: require("../../assets/images/motor.svg").default,
       oleo: require("../../assets/images/car-oil.svg").default,
+      logo: require("../../assets/images/logo-2.svg").default,
     };
   },
 };
@@ -259,7 +342,7 @@ export default {
   }
 
   &_referencia {
-      padding: 30px;
+    padding: 30px;
     h4 {
       color: #ffd42e;
       margin-top: 50px;
@@ -269,13 +352,15 @@ export default {
       margin-top: 30px;
     }
 
-    &_caracteristicas {
-        margin-top: 30px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    a {
+      color: #dad7d7;
 
+      span {
+        color: #ffd42e;
+      }
+    }
+
+    &_caracteristicas {
       h6 {
         color: #ffffff;
       }
@@ -285,6 +370,37 @@ export default {
         margin-left: 10px;
       }
     }
+  }
+  &_depoimentos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+
+  &_clientes {
+    background-color: #303030;
+    height: 300px;
+
+    h4 {
+      color: #ffd42e;
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+
+  &_duvida {
+    padding: 40px;
+    h4,
+    p {
+      text-align: center;
+    }
+      button {
+        background-color: #ffd42e;
+        color: #ffffff;
+        border: none;
+      }
   }
 }
 </style>

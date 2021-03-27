@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-navbar toggleable="lg" type="dark" variant="dark">
+        <b-navbar toggleable="lg" type="dark"  class="menu">
             <b-navbar-brand href="#">
                 <b-img :src="logo" class="logo"></b-img>
             </b-navbar-brand>
@@ -31,6 +31,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.menu {
+    background-color: #000000;
+}
 .logo {
     height: 40px;
     @media(min-width: 640px) {
