@@ -119,7 +119,7 @@ export default {
   name: "quem_somos",
   data() {
     return {
-      logo: require("../../assets/images/logo_3.png").default,
+      logo: require("../../assets/images/logo-2.svg").default,
       bloco: require("../../assets/images/borda_amarela.svg").default,
     };
   },

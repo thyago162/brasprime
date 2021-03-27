@@ -3,6 +3,7 @@ import Contato from '../pages/unauthenticated/Contato.vue'
 import QuemSomos from '../pages/unauthenticated/QuemSomos.vue'
 import Servicos from '../pages/unauthenticated/Servicos.vue'
 import Agendamento from '../pages/unauthenticated/Agendamento.vue'
+import Login from '../pages/unauthenticated/Login.vue'
 
 const routes = [
     {
@@ -29,6 +30,11 @@ const routes = [
         path: '/agendamentos',
         component: Agendamento,
         name: 'unauthenticated.agendamento'
+    },
+    {
+        path: '/login',
+        component: Login,
+        name: 'unauthenticated.login'
     }
 ]
 
