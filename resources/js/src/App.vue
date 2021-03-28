@@ -1,8 +1,8 @@
 <template>
    <div>
-       <top-menu />
+       <top-menu v-if="$route.name !== 'unauthenticated.login'"/>
        <router-view></router-view>
-       <Footer />
+       <Footer v-if="$route.name !== 'unauthenticated.login'"/>
    </div>
 </template>
 

@@ -13,6 +13,7 @@
                     <b-nav-item :to="{name: 'unauthenticated.servicos'}">Serviços</b-nav-item>
                     <b-nav-item :to="{name: 'unauthenticated.agendamento'}">Agendamentos</b-nav-item>
                     <b-nav-item :to="{name: 'unauthenticated.contato'}">Contato</b-nav-item>
+                    <b-nav-item :to="{name: 'unauthenticated.login'}">Login</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
