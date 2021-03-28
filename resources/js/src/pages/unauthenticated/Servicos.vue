@@ -54,6 +54,8 @@
         <carousel
           :paginationEnabled="false"
           :navigationEnabled="true"
+          :navigationPrevLabel="letftIcon"
+          :navigationNextLabel="rightIcon"
           :perPage="1"
           class="servicos_carousel"
         >
@@ -95,7 +97,7 @@
           Nos envie uma mensagem e te responderemos
           o mais rápido possível
         </p>
-        <b-button>ENVIAR MENSAGEM</b-button>
+        <b-button class="mt-4">ENVIAR MENSAGEM</b-button>
       </b-col>
     </b-row>
   </b-container>
@@ -106,6 +108,8 @@ export default {
   name: "servicos",
   data() {
     return {
+      letftIcon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left-circle-fill" style="color:#ffd42e " viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg>',
+      rightIcon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill" style="color:#ffd42e " viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/></svg>',
       logo: require("../../assets/images/logo_3.png").default,
       bloco: require("../../assets/images/borda_amarela.svg").default,
       servicos_oferecidos: [
@@ -262,7 +266,7 @@ export default {
   text-align: center;
   padding: 80px 0;
   p {
-    font-size: 18px;
+   
     padding: 12px;
     max-width: 400px;
     margin: 0 auto;
@@ -272,7 +276,7 @@ export default {
     font-weight: bold;
     border: none;
     width: 300px;
-    padding: 15px 10px;
+    padding: 10px 5px;
     font-size: 1.2rem;
   }
 }

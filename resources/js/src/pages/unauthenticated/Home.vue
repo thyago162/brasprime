@@ -14,7 +14,7 @@
           <div class="home_title">
             <h2>Conte com serviços de alta qualidade para o seu carro</h2>
             <p>Lorem ipsun dikir sut amet,consectetur adipsicing elit,</p>
-            <b-button>AGENDAR VISTORIA</b-button>
+            <b-button @click="() => {$router.push('/agendamentos')}">AGENDAR VISTORIA</b-button>
           </div>
         </b-col>
       </b-row>
@@ -30,7 +30,7 @@
       >
         <b-col class="d-flex justify-content-center">
           <div class="home_servicos">
-            <h4>Serviços oferecidos</h4>
+            <h2>Serviços oferecidos</h2>
             <p>
               Lorem ipsum ad potenti risus etiam, pretium nulla lobortis ad
               aliquet, pharetra convallis vulputate senectus. phasellus ante
@@ -76,8 +76,8 @@
             <h5>Vistoria Técnica totalmente <span>GRÁTIS</span></h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             <div>
-              <b-button>VER SERVIÇOS</b-button>
-              <b-button :style="{ backgroundColor: '#ffd42e' }"
+              <b-button  @click="() => {$router.push('/servicos')}">VER SERVIÇOS</b-button>
+              <b-button :style="{ backgroundColor: '#ffd42e' }"  @click="() => {$router.push('/agendamentos')}"
                 >AGENDAR VISTORIA</b-button
               >
             </div>
@@ -98,7 +98,7 @@
         <b-col offset="0" offset-lg="2">
           <b-row>
             <b-col>
-              <h4>Referência automotiva</h4>
+              <h2>Referência automotiva</h2>
               <p>
                 Lorem ipsum phasellus tempor in quisque tempus vulputate class,
                 sem eleifend per maecenas class condimentum etiam elit justo,
@@ -147,7 +147,7 @@
           </b-row>
           <b-row class="mt-5 ml-1">
             <b-col>
-              <b-link>Saiba mais sobre <span>Brasprime</span></b-link>
+              <b-link to="/quem-somos">Saiba mais sobre <span>Brasprime</span></b-link>
             </b-col>
           </b-row>
         </b-col>
@@ -161,16 +161,18 @@
         <b-col class="home_depoimentos">
           <b-row>
             <b-col>
-              <h4 class="mt-4">O que falam sobre nós</h4>
+              <h2 class="mt-5">O que falam sobre nós</h2>
             </b-col>
           </b-row>
           <b-row>
             <b-col cols="12" lg="10" offset="0" offset-lg="1">
               <carousel
+                class="mt-5 mb-5"
                 :perPage="1"
                 :navigationEnabled="true"
                 :paginationEnabled="false"
-                class="mt-5"
+                :navigationPrevLabel="letftIcon"
+                :navigationNextLabel="rightIcon"
               >
                 <slide class="d-flex flex-row justify-content-center">
                   <p>"Atendimento de alto nível com preço justo."</p>
@@ -190,22 +192,22 @@
     <section>
       <b-row class="home_clientes">
         <b-col :style="{ paddingRight: '0px', paddingLeft: '0px' }">
-          <h4>Nossos clientes</h4>
+          <h2>Nossos clientes</h2>
         </b-col>
       </b-row>
     </section>
     <section class="home_duvida">
       <b-row >
         <b-col>
-          <h4 class="mt-4">Ficou alguma dúvida?</h4>
-          <p class="mt-1">
+          <h2 class="mt-5">Ficou alguma dúvida?</h2>
+          <p class="mt-3">
             Nos envie uma mensgem e te responderemos o mais rápido possível
           </p>
         </b-col>
       </b-row>
-      <b-row class="mt-3 mb-4">
+      <b-row class="mt-3 mb-5">
         <b-col class="d-flex flex-row justify-content-center">
-          <b-button>ENVIAR MENSAGEM</b-button>
+          <b-button  @click="() => {$router.push('/contato')}">ENVIAR MENSAGEM</b-button>
         </b-col>
       </b-row>
     </section>
@@ -221,6 +223,8 @@ export default {
       motor: require("../../assets/images/motor.svg").default,
       oleo: require("../../assets/images/car-oil.svg").default,
       logo: require("../../assets/images/logo-2.svg").default,
+      letftIcon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left-circle-fill" style="color:#ffd42e " viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg>',
+      rightIcon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill" style="color:#ffd42e " viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5h2.5z"/></svg>'
     };
   },
 };
@@ -263,6 +267,8 @@ export default {
       font-weight: bold;
       border: none;
       width: 300px;
+      padding: 10px 5px;
+      font-size: 1.2rem;
     }
   }
 
@@ -277,7 +283,7 @@ export default {
       font-size: 12px;
     }
 
-    h4 {
+    h2 {
       margin-top: 50px;
     }
     p {
@@ -336,14 +342,18 @@ export default {
 
     button {
       margin-top: 20px;
-      border: none;
       margin-bottom: 30px;
+      font-weight: bold;
+      border: none;
+      width: 250px;
+      padding: 10px 5px;
+      font-size: 1.2rem;
     }
   }
 
   &_referencia {
     padding: 30px;
-    h4 {
+    h2 {
       color: #ffd42e;
       margin-top: 50px;
     }
@@ -383,7 +393,7 @@ export default {
     background-color: #303030;
     height: 300px;
 
-    h4 {
+    h2 {
       color: #ffd42e;
       text-align: center;
       margin-top: 40px;
@@ -392,14 +402,18 @@ export default {
 
   &_duvida {
     padding: 40px;
-    h4,
+    h2,
     p {
       text-align: center;
     }
       button {
-        background-color: #ffd42e;
-        color: #ffffff;
-        border: none;
+         background-color: #ffd42e;
+      font-weight: bold;
+      border: none;
+      width: 300px;
+      padding: 10px 5px;
+      font-size: 1.2rem;
+        
       }
   }
 }

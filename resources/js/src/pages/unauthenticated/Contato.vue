@@ -92,7 +92,7 @@
       </b-col>
     </b-row>
     <b-row class="mt-4">
-      <b-col cols="12">
+      <b-col cols="12" :style="{paddingRight: '0px', paddingLeft: '0px'}">
         <div class="mapouter">
           <div class="gmap_canvas">
             <iframe
@@ -164,10 +164,11 @@ export default {
     }
     button {
       background-color: #ffd42e;
-      color: #ffffff;
       font-weight: bold;
       border: none;
-      width: 250px;
+      width: 300px;
+      padding: 10px 5px;
+      font-size: 1.2rem;
     }
   }
   &_info {

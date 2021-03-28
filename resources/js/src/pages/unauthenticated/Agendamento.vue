@@ -107,10 +107,11 @@ export default {};
 <style lang="scss" scoped>
 button {
     background-color: #ffd42e;
-    color: #ffffff;
-    font-weight: bold;
-    border: none;
-    width: 250px;
+      font-weight: bold;
+      border: none;
+      width: 300px;
+      padding: 10px 5px;
+      font-size: 1.2rem;
 }
 .agendamento {
   background-size: cover;
@@ -183,7 +184,6 @@ button {
   text-align: center;
   padding: 80px 0;
   p {
-    font-size: 18px;
     padding: 12px;
     max-width: 400px;
     margin: 0 auto;
@@ -193,7 +193,7 @@ button {
     font-weight: bold;
     border: none;
     width: 300px;
-    padding: 15px 10px;
+    padding: 10px 5px;
     font-size: 1.2rem;
   }
 }
