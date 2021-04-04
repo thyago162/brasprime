@@ -8,7 +8,7 @@
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav class="mx-auto">
                      <b-img-lazy :src="logo" class="logo"></b-img-lazy>
-                    <b-nav-item :to="{name: 'unauthenticated.home'}">Início</b-nav-item>
+                    <b-nav-item class="ml-5" :to="{name: 'unauthenticated.home'}">Início</b-nav-item>
                     <b-nav-item :to="{name: 'unauthenticated.quem_somos'}">Quem somos</b-nav-item>
                     <b-nav-item :to="{name: 'unauthenticated.servicos'}">Serviços</b-nav-item>
                     <b-nav-item :to="{name: 'unauthenticated.agendamento'}">Agendamentos</b-nav-item>
@@ -35,6 +35,11 @@ export default {
 <style lang="scss" scoped>
 .menu {
     background-color: #000000;
+    @media(min-width: 640px) {
+        a {
+            font-size: 20px;
+        }
+    }    
 }
 
 .logo_mobile {
@@ -46,7 +51,7 @@ export default {
 
 }
 .logo {
-    height: 40px;
+    height: 50px;
     display: none;
     @media(min-width: 640px) {
         margin-left: 50px;

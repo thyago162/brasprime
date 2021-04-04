@@ -4,6 +4,7 @@ import QuemSomos from '../pages/unauthenticated/QuemSomos.vue'
 import Servicos from '../pages/unauthenticated/Servicos.vue'
 import Agendamento from '../pages/unauthenticated/Agendamento.vue'
 import Login from '../pages/unauthenticated/Login.vue'
+import Schedules from '../pages/authenticated/Schedules.vue'
 
 const routes = [
     {
@@ -35,6 +36,11 @@ const routes = [
         path: '/login',
         component: Login,
         name: 'unauthenticated.login'
+    },
+    {
+        path: '/auth/agendamentos',
+        component: Schedules,
+        name: 'authenticated.schedules'
     }
 ]
 

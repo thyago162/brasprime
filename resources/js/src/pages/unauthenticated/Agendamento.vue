@@ -51,12 +51,7 @@
                 ></b-form-input>
               </b-form-group>
             </b-col>
-            <b-col cols="12" sm="6" md="4" class="mb-3">
-              <b-form-group>
-                <label for="">Serviços</label>
-                <b-form-select></b-form-select>
-              </b-form-group>
-            </b-col>
+
             <b-col cols="12" sm="6" md="4" class="mb-3">
               <b-form-group>
                 <label for="">Data do agendamento</label>
@@ -64,6 +59,20 @@
                   type="date"
                   placeholder="Data do agendamento"
                 ></b-form-input>
+              </b-form-group>
+            </b-col>
+          </b-row>
+          <b-row>
+            <b-col>
+              <b-form-group label="Serviços">
+                <b-form-checkbox-group
+                  v-slot="{ ariaDescribedby }"
+                  id="checkbox-group-1"
+                  v-model="servicosEscolhidos"
+                  :options="servicos"
+                  :aria-describedby="ariaDescribedby"
+                  name="flavour-1"
+                ></b-form-checkbox-group>
               </b-form-group>
             </b-col>
           </b-row>
@@ -90,10 +99,7 @@
     >
       <b-col class="fale_conosco">
         <h2>Ficou com alguma dúvida?</h2>
-        <p>
-          Nos envie uma mensagem e te responderemos
-          o mais rápido possível
-        </p>
+        <p>Nos envie uma mensagem e te responderemos o mais rápido possível</p>
         <b-button>ENVIAR MENSAGEM</b-button>
       </b-col>
     </b-row>
@@ -101,17 +107,32 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "agendamento",
+  data() {
+    return {
+      servicosEscolhidos: [],
+      servicos: [
+        { text: "Suspensão", value: 1 },
+        { text: "Motor", value: 2 },
+        { text: "Troca de óleo", value: 3 },
+        { text: "Alinhamento", value: 4 },
+        { text: "Freios", value: 5 },
+        { text: "Leva e traz", value: 5 },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 button {
-    background-color: #ffd42e;
-      font-weight: bold;
-      border: none;
-      width: 300px;
-      padding: 10px 5px;
-      font-size: 1.2rem;
+  background-color: #ffd42e;
+  font-weight: bold;
+  border: none;
+  width: 300px;
+  padding: 10px 5px;
+  font-size: 1.2rem;
 }
 .agendamento {
   background-size: cover;
@@ -156,25 +177,24 @@ button {
       border-color: #303030;
     }
     .termos_uso {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-  }
-
-  &_mensagem {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: rgb(229, 232, 238);
-      margin-top: 50px;
-      padding: 30px;
-      height: 300px;
+    }
   }
 
- 
+  &_mensagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(229, 232, 238);
+    margin-top: 50px;
+    padding: 30px;
+    height: 300px;
+  }
+
   .agendamento_div {
     background-size: contain;
     background-repeat: no-repeat;

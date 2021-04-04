@@ -1,6 +1,6 @@
 <template>
    <div>
-       <top-menu v-if="$route.name !== 'unauthenticated.login'"/>
+       <top-menu v-if="$route.name !== 'unauthenticated.login' && $route.name !== 'authenticated.schedules'"/>
        <router-view></router-view>
        <Footer v-if="$route.name !== 'unauthenticated.login'"/>
    </div>
