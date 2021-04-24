@@ -64,7 +64,8 @@
           </b-row>
           <b-row>
             <b-col>
-              <b-form-group label="Serviços">
+              <b-form-group >
+                  <h5>Serviços</h5>
                 <b-form-checkbox-group
                   v-slot="{ ariaDescribedby }"
                   id="checkbox-group-1"
@@ -76,6 +77,73 @@
               </b-form-group>
             </b-col>
           </b-row>
+          <div class="mt-4" v-if="exibirEndereco">
+            <b-row>
+              <b-col>
+                <h5>
+                  Informe o seu endereço para que possamos buscar o veículo.
+                </h5>
+              </b-col>
+            </b-row>
+            <b-row class="mt-4">
+              <b-col cols="2">
+                <b-form-group>
+                  <label for="">Cep</label>
+                  <b-form-input
+                    type="text"
+                    placeholder="Cep"
+                  ></b-form-input>
+                </b-form-group>
+              </b-col>
+              <b-col>
+                <b-form-group>
+                  <label for="">Endereço</label>
+                  <b-form-input
+                    type="text"
+                    placeholder="Endereço"
+                  ></b-form-input>
+                </b-form-group>
+              </b-col>
+              <b-col cols="1">
+                <b-form-group>
+                  <label for="">Número</label>
+                  <b-form-input
+                    type="text"
+                    placeholder="Nº"
+                  ></b-form-input>
+                </b-form-group>
+              </b-col>
+              <b-col>
+                <b-form-group>
+                  <label for="">Complemento</label>
+                  <b-form-input
+                    type="text"
+                    placeholder="Complemento"
+                  ></b-form-input>
+                </b-form-group>
+              </b-col>
+            </b-row>
+            <b-row>
+              <b-col>
+                <b-form-group>
+                  <label for="">Bairro</label>
+                  <b-form-input
+                    type="text"
+                    placeholder="Bairro"
+                  ></b-form-input>
+                </b-form-group>
+              </b-col>
+              <b-col>
+                <b-form-group>
+                  <label for="">Cidade</label>
+                  <b-form-input
+                    type="text"
+                    placeholder="Cidade"
+                  ></b-form-input>
+                </b-form-group>
+              </b-col>
+            </b-row>
+          </div>
           <b-row class="mt-5">
             <b-col>
               <div class="termos_uso">
@@ -116,12 +184,17 @@ export default {
         { text: "Suspensão", value: 1 },
         { text: "Motor", value: 2 },
         { text: "Troca de óleo", value: 3 },
-        { text: "Alinhamento", value: 4 },
+        { text: "Alinhamento/Balanceamento", value: 4 },
         { text: "Freios", value: 5 },
-        { text: "Leva e traz", value: 5 },
+        { text: "Leva e traz", value: 6 },
       ],
     };
   },
+  computed: {
+      exibirEndereco: function() {
+          return this.servicosEscolhidos.find(element => element == 6)
+      }
+  }
 };
 </script>
 
@@ -169,6 +242,7 @@ button {
     }
     input {
       border-color: #303030;
+      height: 45px;
     }
     textarea {
       border-color: #303030;

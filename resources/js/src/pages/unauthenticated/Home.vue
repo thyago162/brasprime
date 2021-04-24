@@ -13,8 +13,8 @@
         >
           <div class="home_title">
             <h2>Conte com serviços de alta qualidade para o seu carro</h2>
-            <p>Lorem ipsun dikir sut amet,consectetur adipsicing elit,</p>
-            <b-button @click="() => {$router.push('/agendamentos')}">AGENDAR VISTORIA</b-button>
+            <p>Brasprime, a tecnologia das montadoras ao seu alcance</p>
+            <b-button @click="() => {$router.push('/agendamentos')}">AGENDAR SERVIÇOS</b-button>
           </div>
         </b-col>
       </b-row>
@@ -32,9 +32,7 @@
           <div class="home_servicos">
             <h2>Serviços oferecidos</h2>
             <p>
-              Lorem ipsum ad potenti risus etiam, pretium nulla lobortis ad
-              aliquet, pharetra convallis vulputate senectus. phasellus ante
-              curabitur inceptos aliquam sagittis arcu luctus
+              Brasprime, excelência nos mais diversos serviços.
             </p>
             <div class="servicos_icones">
               <div class="d-flex flex-column bloco_icone">
@@ -42,27 +40,18 @@
                   <b-img-lazy :src="suspensao"></b-img-lazy>
                 </div>
                 <h6 class="mt-1">Suspenção</h6>
-                <span class="ml-3"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span
-                >
               </div>
               <div class="d-flex flex-column bloco_icone">
                 <div class="icone">
                   <b-img-lazy :src="oleo"></b-img-lazy>
                 </div>
                 <h6 class="mt-1">Troca de Óleo</h6>
-                <span class="ml-3"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span
-                >
               </div>
               <div class="d-flex flex-column bloco_icone">
                 <div class="icone">
                   <b-img-lazy :src="motor"></b-img-lazy>
                 </div>
                 <h6 class="mt-1">Motor</h6>
-                <span class="ml-3"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span
-                >
               </div>
             </div>
           </div>
@@ -74,11 +63,11 @@
         <b-col cols="12 d-flex justify-content-center">
           <div class="mt-5 home_info">
             <h5>Vistoria Técnica totalmente <span>GRÁTIS</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p>Agenda agora uma vistória.</p>
             <div>
               <b-button  @click="() => {$router.push('/servicos')}">VER SERVIÇOS</b-button>
               <b-button :style="{ backgroundColor: '#ffd42e' }"  @click="() => {$router.push('/agendamentos')}"
-                >AGENDAR VISTORIA</b-button
+                >AGENDAR SERVIÇOS</b-button
               >
             </div>
           </div>
@@ -413,7 +402,7 @@ export default {
       width: 300px;
       padding: 10px 5px;
       font-size: 1.2rem;
-        
+
       }
   }
 }

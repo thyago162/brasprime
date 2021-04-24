@@ -36,7 +36,7 @@ export default {
         password: "",
         grant_type: "password",
         client_id: "2",
-        client_secret: process.env.OAUTH
+        client_secret: process.env.OAUTH_KEY
       },
     };
   },
@@ -49,7 +49,7 @@ export default {
       .catch(error => {
         alert('epaaaa')
       })
-      
+
     }
   }
 };
